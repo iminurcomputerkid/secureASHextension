@@ -1,0 +1,82 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #ecf0f1;
+  --accent-color: #4caf50;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --border-radius: 6px;
+  --spacing: 12px;
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: var(--spacing);
+  width: 300px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 14px;
+}
+
+.options-container {
+  background-color: var(--bg-color);
+  padding: var(--spacing);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: var(--spacing);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4em;
+  color: var(--primary-color);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--spacing);
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.form-group input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+}
+
+#save-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#save-btn:hover {
+  background-color: #43a047;
+}
+
+#status {
+  margin-top: 8px;
+  font-size: 0.9em;
+  color: var(--primary-color);
+}

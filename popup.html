@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge"
+  />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Secure ASF Client</title>
+  <link
+    rel="stylesheet"
+    href="popup.css"
+  />
+</head>
+<body>
+  <!-- HEADER / NAV -->
+  <header>
+    <button id="back-btn" class="back-btn">← BACK</button>
+    <h1>Secure ASF</h1>
+    <button id="logout-btn" class="logout-btn">LOGOUT</button>
+  </header>
+
+  <!-- LOGIN PAGE -->
+  <div id="page-login" class="page card">
+    <form id="login-form">
+      <label>Username
+        <input type="text" name="username" required />
+      </label>
+      <label>Password
+        <input type="password" name="password" required />
+      </label>
+      <button type="submit" class="primary-btn">Log In</button>
+    </form>
+  </div>
+
+  <!-- MAIN MENU -->
+  <div id="page-menu" class="page card">
+    <nav id="main-menu">
+      <button data-page="page-credentials">Site/Service Vault</button>
+      <button data-page="page-wallets">Wallets Vault</button>
+      <button data-page="page-docs">Docs Vault</button>
+      <button data-page="page-settings">Account Settings</button>
+    </nav>
+  </div>
+
+  <!-- CREDENTIALS VAULT -->
+  <section id="page-credentials" class="page card">
+    <h2>Site/Service Vault</h2>
+    <ul id="credentials-list"></ul>
+    <button id="add-credential-btn" class="accent-btn">+ Add Credential</button>
+  </section>
+
+  <!-- WALLETS VAULT -->
+  <section id="page-wallets" class="page card">
+    <h2>Wallets Vault</h2>
+    <ul id="wallets-list"></ul>
+    <button id="add-wallet-btn" class="accent-btn">+ Add Wallet</button>
+  </section>
+
+  <!-- DOCUMENTS VAULT -->
+  <section id="page-docs" class="page card">
+    <h2>Docs Vault</h2>
+    <ul id="documents-list"></ul>
+    <button id="add-document-btn" class="accent-btn">+ Add Document</button>
+  </section>
+
+  <!-- ACCOUNT SETTINGS -->
+  <section id="page-settings" class="page card">
+    <h2>Account Settings</h2>
+    <ul id="account-settings-list">
+      <li><button id="change-password-btn">Change Password</button></li>
+      <li><button id="enable-2fa-btn">Enable 2FA</button></li>
+      <li><button id="disable-2fa-btn">Disable 2FA</button></li>
+      <li><button id="delete-all-data-btn">Delete All Data</button></li>
+    </ul>
+  </section>
+
+  <!-- MODAL OVERLAY -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close">×</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

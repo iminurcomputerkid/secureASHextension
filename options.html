@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secure ASF — Options</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="options-container">
+    <header>
+      <h1>Extension Settings</h1>
+    </header>
+
+    <form id="options-form">
+      <div class="form-group">
+        <label for="api-url">API Server URL</label>
+        <input
+          type="url"
+          id="api-url"
+          name="api-url"
+          placeholder="http://127.0.0.1:8000"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="auto-lock">Auto-lock timeout (minutes)</label>
+        <input
+          type="number"
+          id="auto-lock"
+          name="auto-lock"
+          min="1"
+          max="60"
+          placeholder="15"
+        />
+      </div>
+
+      <button type="submit" id="save-btn">Save</button>
+      <div id="status" role="status"></div>
+    </form>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

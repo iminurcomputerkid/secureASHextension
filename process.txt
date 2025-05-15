@@ -1,0 +1,36 @@
+Blueprint:
+
+secure-asf-extension/
+├── manifest.json           # Chrome extension manifest (v3)
+├── README.md               # Project overview & install instructions
+├── LICENSE                 # e.g. MIT license
+├── .gitignore              # ignore node_modules, build artifacts, etc.
+
+├── icons/                  # your extension’s icons
+│   ├── icon16.png          # toolbar icon (16×16)
+│   ├── icon48.png          # popup icon (48×48)
+│   └── icon128.png         # Chrome Web Store (128×128)
+
+├── popup.html              # main UI when user clicks the icon
+├── popup.css               # styles for popup.html
+├── popup.js                # DOM logic + fetch() calls to your FastAPI server
+
+├── background.js           # service worker: handles alarms, context menus, notifications
+
+├── options.html            # (optional) “Options” page in Extension Settings
+├── options.css             # styles for options.html
+├── options.js              # logic for options page (e.g. saving custom server URL)
+
+└── assets/                 # any additional images/fonts/icons you need
+    └── …                   # e.g. loader.gif, custom fonts, logos, etc.
+
+
+
+Lets get it:
+
+
+5/15/2025:
+
+Researched, what we need, now lets code
+
+

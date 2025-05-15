@@ -1,0 +1,321 @@
+:root {
+  --bg-color: #f5f7fa;
+  --card-bg: #ffffff;
+  --primary-color: #1f2a63;
+  --secondary-color: #4a47a3;
+  --accent-color: #e76f51;
+  --accent-hover: #d65a3f;
+  --text-color: #333333;
+  --border-radius: 8px;
+  --spacing: 16px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 320px;
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  color: var(--text-color);
+  padding: var(--spacing);
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  padding: var(--spacing);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: var(--spacing);
+}
+.back-btn,
+.logout-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.logout-btn {
+  border: 1px solid rgba(255,255,255,0.8);
+  padding: 6px 12px;
+  border-radius: var(--border-radius);
+  transition: background 0.2s;
+}
+.logout-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
+header h1 {
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+/* CARDS & PAGES */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+.page {
+  display: none;
+}
+
+/* MAIN MENU */
+#main-menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+#main-menu button {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-transform: uppercase;
+}
+#main-menu button:hover {
+  background-color: var(--primary-color);
+}
+
+/* LOGIN FORM */
+#login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing);
+}
+#login-form label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+#login-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+}
+.primary-btn {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-transform: uppercase;
+}
+.primary-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* VAULT TITLES */
+.page section h2 {
+  font-size: 1rem;
+  margin-bottom: var(--spacing);
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+/* CONTENT LISTS */
+#credentials-list,
+#wallets-list,
+#documents-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing) 0;
+}
+#credentials-list li,
+#wallets-list li,
+#documents-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing);
+  padding: var(--spacing);
+  margin-bottom: var(--spacing);
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  font-size: 0.9rem;
+}
+#credentials-list li button,
+#wallets-list li button,
+#documents-list li button {
+  margin-left: auto;
+  padding: 6px 10px;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-transform: uppercase;
+}
+#credentials-list li button:hover,
+#wallets-list li button:hover,
+#documents-list li button:hover {
+  background-color: var(--accent-hover);
+}
+
+/* ADD BUTTONS */
+.accent-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-transform: uppercase;
+}
+.accent-btn:hover {
+  background-color: var(--accent-hover);
+}
+
+/* ACCOUNT SETTINGS */
+#account-settings-list {
+  list-style: none;
+  padding: 0;
+}
+#account-settings-list li {
+  margin-bottom: var(--spacing);
+}
+#account-settings-list button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-transform: uppercase;
+}
+#account-settings-list button:hover {
+  background-color: var(--primary-color);
+}
+
+/* BUTTON LOADING SHIMMER */
+button.loading {
+  position: relative;
+  overflow: hidden;
+  color: transparent !important;
+  pointer-events: none;
+}
+button.loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.4) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  animation: shimmer 1s infinite;
+}
+@keyframes shimmer {
+  from { left: -100%; }
+  to   { left: 100%; }
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;   /* hide initially */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+.modal-content {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: var(--spacing);
+  width: 90%;
+  max-width: 360px;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* MODAL FORM STRUCTURE */
+.modal-content h3 {
+  margin-bottom: var(--spacing);
+  font-size: 1.1rem;
+}
+.modal-content label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.modal-content label input,
+.modal-content label textarea {
+  width: 100%;
+  margin-top: 4px;
+  margin-bottom: var(--spacing);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  resize: vertical;
+}
+
+/* COPY BUTTON */
+.copy-btn {
+  margin-left: var(--spacing);
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: var(--border-radius);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.copy-btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* ERROR MESSAGE */
+.error-msg {
+  color: #e63946;
+  font-size: 0.9rem;
+  margin: 8px 0;
+}
