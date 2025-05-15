@@ -33,4 +33,18 @@ Lets get it:
 
 Researched, what we need, now lets code
 
+fast forward, 
+got a good amount done, its up and running and functions a little bit 
+
+5/15/2025: 
+changes to make:
+-fix formatting with adding credentials
+-modify view credentials buttons to show masked password with a reveal button and a copy password button
+-fix code to where when 2fa is enabled, it'll actually let the user make internal changes (add creds, update, delete), 
+basically stop prompting for 2fa codes to do anything
+-make it look pretty
+
+
+
+
 
